@@ -1,4 +1,4 @@
-declare enum HttpMethod {
+export enum HttpMethod {
     POST = 'post',
     GET = 'get',
     PUT = 'put',
@@ -6,7 +6,7 @@ declare enum HttpMethod {
     PATCH = 'patch'
 }
 
-declare enum HttpStatusCode {
+export enum HttpStatusCode {
     SUCCESS = 200,
     CREATED = 201,
     BAD_REQUEST = 400,
@@ -16,11 +16,11 @@ declare enum HttpStatusCode {
     SERVER_ERROR = 500
 }
 
-declare interface HttpRequest<T>{
+export declare interface HttpRequest<T>{
     method: HttpMethod;
     url: string;
     data?: T;
-    header?: unknown;
+    header?: any;
 }
 
 declare interface HttpResponse<T>{

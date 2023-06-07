@@ -1,4 +1,3 @@
-import { HttpStatusCode } from "axios";
 import { HttpResponse, HttpStatus } from "../infra/http/HttpClient";
 
 export default function generateHttpGeneralResponse<T>(response: HttpResponse<T>) {

@@ -6,7 +6,7 @@ export enum HttpMethod {
     PATCH = 'patch'
 }
 
-export enum HttpStatusCode {
+export enum HttpStatus {
     SUCCESS = 200,
     CREATED = 201,
     BAD_REQUEST = 400,
@@ -23,10 +23,10 @@ export declare interface HttpRequest<T>{
     header?: any;
 }
 
-declare interface HttpResponse<T>{
-    statusCode: HttpStatusCode
+export declare interface HttpResponse<T>{
+    statusCode: HttpStatus;
     header: any;
-    data: T;
+    data?: T;
 }
 
 export interface HttpClient {
